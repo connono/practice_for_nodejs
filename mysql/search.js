@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var connection = mysql.createaConnection({
+var connection = mysql.createConnection({
 	host : 'localhost',
 	user : 'root',
 	password : 'woshiwangyulin',
@@ -7,7 +7,7 @@ var connection = mysql.createaConnection({
 	database: 'test',
 });
 connection.connect();
-var sql = 'SELECT * FORM websites';
+var sql = 'SELECT * FROM websites';
 connection.query(sql, function(err, result){
 	if (err) {
 		console.log('[SELECT ERROR] - ',err.message);
